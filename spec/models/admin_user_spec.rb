@@ -1,5 +1,5 @@
 require 'spec_helper'
 
-describe Admin do
+describe AdminUser do
   it { should have_many :services }
 end

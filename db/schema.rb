@@ -11,9 +11,9 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121006041236) do
+ActiveRecord::Schema.define(:version => 20121006063824) do
 
-  create_table "admins", :force => true do |t|
+  create_table "admin_users", :force => true do |t|
     t.string   "username"
     t.string   "email"
     t.string   "password_digest"
@@ -24,9 +24,9 @@ ActiveRecord::Schema.define(:version => 20121006041236) do
   create_table "services", :force => true do |t|
     t.string   "name"
     t.integer  "position"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-    t.integer  "admin_id"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+    t.integer  "admin_user_id"
   end
 
 end

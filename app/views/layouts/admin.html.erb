@@ -8,6 +8,11 @@
 </head>
 <body>
 
+<div id="header-section">
+  <% if current_admin %>
+    Logged in as <%= current_admin.username %> [<%= link_to 'logout', admin_session_path(current_admin), method: :delete %>]
+  <% end %>
+</div>
 <%= yield %>
 
 </body>
